@@ -19,8 +19,21 @@ app.use(function(req, res, next){
 
 app.use(express.static('public'));
 app.use(cors());
+
 app.get('/tasks', function(req, res){
 	res.json(tasks);
+});
+
+app.post('/tasks', function(req, res){
+	tasks.push(req.body);
+	res.json(tasks);
 })
+
+app.delete('/tasks/:task', function(req, res){
+	tasks = tasks.filter(function(v, i){
+		return v.title.toLowerCase() !== req.params.task.toLowerCase(); 
+	});
+	res.json(tasks);
+});
 
 app.listen(port);
