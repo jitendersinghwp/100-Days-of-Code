@@ -1,0 +1,93 @@
+body{
+	max-width: 500px;
+	margin: 50px auto;
+	font-family: sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+.to-do-list-container h1{
+	margin-bottom: 0;
+	text-align: center;
+	color: #fff;
+	background-color: purple;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.tasks{
+	border: 2px solid purple;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.task{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+.task:not(:first-of-type){
+	border-top: 1px solid purple;
+}
+.task .sr{
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	color: #fff;
+	background-color: purple;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 20px;
+}
+.task-details span{
+	display: block;
+}
+.task-details .task-title{
+	font-weight: bold;
+}
+.remove-task{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-color: #f44336;
+}
+.remove-task a{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 60px;
+    line-height: 0;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.no-tasks{
+	text-align: center;
+	padding: 20px;
+}
+.add-task{
+	margin-top: 30px;
+}
+form input,
+form button{
+	min-height: 50px;
+	border-radius: 10px;
+	border: .5px solid grey;
+	width: 100%;
+	margin-bottom: 16px;
+	font-size: 18px;
+	padding: 5px;
+}
+form input:focus{
+	outline: none;
+}
+form button{
+	background-color: purple;
+	color: #fff;
+	border: 1px solid purple;
+}
