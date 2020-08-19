@@ -90,4 +90,5 @@ form button{
 	background-color: purple;
 	color: #fff;
 	border: 1px solid purple;
+	cursor: pointer;
 }
