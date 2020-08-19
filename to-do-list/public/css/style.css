@@ -45,6 +45,9 @@ body{
 .task-details .task-title{
 	font-weight: bold;
 }
+.task .task-details{
+	flex-grow: 1;
+}
 .remove-task{
 	position: relative;
 	width: 40px;
