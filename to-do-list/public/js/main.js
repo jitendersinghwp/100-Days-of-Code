@@ -7,11 +7,44 @@ $(function(){
 			method: 'GET',
 			dataType: 'json',
 			success: function(res){
-				updateTasks(res);
-				
+				updateTasks(res);	
 			}
-		})
+		});
 	}
+
+	$('#addTasks').on('submit', function(e){
+		e.preventDefault();
+		var taskTitle  = $('[name=title]').val();
+		var taskDescription = $('[name=description]').val();
+
+		$.ajax({
+			url: '/tasks',
+			method: 'POST',
+			dataType: 'json',
+			data: {
+				title: taskTitle, 
+				description: taskDescription,
+			},
+			success: function(res){
+				updateTasks(res);
+				$('form')[0].reset();		
+			}
+		});	
+	});
+
+	$('body').on('click','.remove-task a', function(e){
+		e.preventDefault();
+		var title  = $(this).data('title');
+		var url = '/tasks/'+title;
+		
+		$.ajax({
+			url: url,
+			type: 'DELETE',
+			success: function(res){
+				updateTasks(res);		
+			}
+		});	
+	});
 
 });
 
