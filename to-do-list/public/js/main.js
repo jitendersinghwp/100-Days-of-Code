@@ -30,7 +30,7 @@ function updateTasks(tasks){
 							'<span class="task-description">'+ v.description +'</span>'+
 						'</div>'+
 						'<div class="remove-task">'+
-							'<a href="'+ v.title +'">-</a>'+
+							'<a href="#" data-title ="'+ v.title +'">-</a>'+
 						'</div>'+
 					'</div>';
 		});
