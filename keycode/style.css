@@ -1,0 +1,25 @@
+body{
+	max-width: 600px;
+	margin: 0 auto;
+}
+h1{
+	padding: 20px;
+	border: 2px solid purple;
+	font-size: 60px;
+	text-align: center;
+}
+
+.keyCode{
+	font-size: 150px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.key{
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
